@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild src/**/*.js public/index.html --bundle --outdir=dist --minify"
+    "build": "esbuild src/**/*.js --bundle --outdir=dist --minify && cp -r public/* dist/"
   },
   "keywords": [],
   "author": "",

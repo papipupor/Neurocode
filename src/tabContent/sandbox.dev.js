@@ -1,8 +1,8 @@
 export default function(container) {
-  container.innerHTML = `<div id="out" class="p-4 bg-black text-green-400 h-64 overflow-y-auto border border-gray-700 rounded"></div>
+  container.innerHTML = `<div id="sandbox-output" class="p-4 bg-black text-green-400 h-64 overflow-y-auto border border-gray-700 rounded"></div>
   <form id="form" class="flex p-2 items-center space-x-2"><span>&gt;</span><input id="cmd" class="flex-1 bg-gray-800 p-2 text-white" autocomplete="off"/></form>`;
 
-  const out = container.querySelector('#out');
+  const sandboxOutput = container.querySelector('#sandbox-output');
   const form = container.querySelector('#form');
   const cmd = container.querySelector('#cmd');
 
@@ -16,16 +16,17 @@ export default function(container) {
       append('Error: command not allowed');
       return;
     }
+    let result;
     try {
-      const result = eval(code);
-      append(String(result));
+      result = Function('"use strict";return (' + code + ')')();
     } catch (err) {
-      append('Error: ' + err.message);
+      result = `\u26A0\uFE0F Error: ${err.message}`;
     }
+    append(String(result));
   });
 
   function append(text) {
-    out.textContent += text + '\n';
-    out.scrollTop = out.scrollHeight;
+    sandboxOutput.textContent += text + '\n';
+    sandboxOutput.scrollTop = sandboxOutput.scrollHeight;
   }
 }
