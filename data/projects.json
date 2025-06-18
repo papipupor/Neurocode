@@ -1,0 +1,14 @@
+[
+  {
+    "name": "CyberScope AI",
+    "desc": "Autonomous pentest interface with GPT-4",
+    "tech": ["Python", "Langchain", "FastAPI"],
+    "year": 2024
+  },
+  {
+    "name": "Neurocode Studio",
+    "desc": "Terminal-based portfolio UI",
+    "tech": ["HTML", "Tailwind", "JavaScript"],
+    "year": 2025
+  }
+]

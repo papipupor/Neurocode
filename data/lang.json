@@ -1,0 +1,17 @@
+{
+  "en": {
+    "welcome": "Welcome to Neurocode Studio",
+    "about": "About",
+    "skills": "Skills"
+  },
+  "id": {
+    "welcome": "Selamat datang di Neurocode Studio",
+    "about": "Tentang",
+    "skills": "Keahlian"
+  },
+  "jp": {
+    "welcome": "Neurocode Studio へようこそ",
+    "about": "概要",
+    "skills": "スキル"
+  }
+}
