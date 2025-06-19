@@ -1,7 +1,7 @@
 {
   "name": "neurocode",
   "version": "1.0.0",
-  "description": "Futuristic, animated, and interactive terminal-style portfolio UI built with JavaScript and TailwindCSS. Perfect for developers, AI enthusiasts, and ethical hackers.",
+  "description": "Terminal-style portfolio with Tailwind, JavaScript & modular UI.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
