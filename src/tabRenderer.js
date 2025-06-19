@@ -12,8 +12,13 @@ export async function renderTab(id) {
   container.innerHTML = '';
   let mod = cache.get(id);
   if (!mod) {
-    mod = await loadTab(id);
-    if (mod) cache.set(id, mod);
+    try {
+      mod = await loadTab(id);
+      if (mod) cache.set(id, mod);
+    } catch (err) {
+      console.error(err);
+      mod = null;
+    }
   }
   if (mod && typeof mod.default === 'function') {
     mod.default(container);
