@@ -1,8 +1,11 @@
 export async function loadTab(tab) {
   try {
     return await import(`./${tab}.js`);
-  } catch (e) {
-    document.getElementById('app').innerHTML = `Tab ${tab} not found.`;
+  } catch (err) {
+    const el = document.getElementById('app');
+    if (el) {
+      el.innerHTML = `<p style='color:white;'>Tab #/${tab} not found.</p>`;
+    }
     return null;
   }
 }
