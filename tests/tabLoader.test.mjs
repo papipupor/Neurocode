@@ -14,5 +14,5 @@ test('loadTab shows fallback for missing tab', async () => {
   };
   const mod = await loadTab('no-such-tab');
   assert.equal(mod, null);
-  assert.equal(content, 'Tab no-such-tab not found.');
+  assert.equal(content, "<p style='color:white;'>Tab #/no-such-tab not found.</p>");
 });
