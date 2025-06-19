@@ -4,13 +4,13 @@
   "description": "Terminal-style portfolio with Tailwind, JavaScript & modular UI.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild src/main.js --bundle --outfile=dist/main.js --minify && cp -r public/* dist/"
+    "test": "node --test",
+    "build": "esbuild src/**/*.js --bundle --outdir=dist --minify && cp -r public/* dist/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "esbuild": "^0.25.5"
   }
