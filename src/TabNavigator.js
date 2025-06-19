@@ -27,7 +27,7 @@ export function initSidebar(onSelect) {
     btn.dataset.tabId = t.id;
     btn.className =
       'w-full h-12 flex items-center justify-center border-l-4 border-transparent glow-hover transition ease-in-out duration-300';
-    btn.innerHTML = `<img src="../public/assets/icons/${t.icon}.svg" class="w-5 h-5" alt="${t.id}">`;
+    btn.innerHTML = `<img src="./assets/icons/${t.icon}.svg" class="w-5 h-5" alt="${t.id}">`;
     btn.addEventListener('click', () => {
       onSelectCb(t.id);
       if (window.innerWidth < 640) sidebar.classList.add('hidden');
