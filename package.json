@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node --test",
-    "build": "esbuild src/main.js --bundle --outfile=dist/main.js --minify && cp -r public/* dist/ && mkdir -p dist/tabContent && cp src/tabContent/*.js dist/tabContent/"
+    "build": "esbuild src/**/*.js --bundle --outdir=dist --minify && cp -r public/* dist/ && cp -r styles dist/"
   },
   "keywords": [],
   "author": "",
