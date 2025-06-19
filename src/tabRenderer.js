@@ -1,4 +1,4 @@
-import {loadTab} from './tabContent/TabLoader.js';
+import {loadTab} from './TabLoader.js';
 
 let container;
 const cache = new Map();
