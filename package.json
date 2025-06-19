@@ -1,11 +1,11 @@
 {
   "name": "neurocode",
   "version": "1.0.0",
-  "description": "Futuristic, animated, and interactive terminal-style portfolio UI built with JavaScript and TailwindCSS.   Perfect for developers, AI enthusiasts, and ethical hackers.",
+  "description": "Futuristic, animated, and interactive terminal-style portfolio UI built with JavaScript and TailwindCSS. Perfect for developers, AI enthusiasts, and ethical hackers.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild src/**/*.js --bundle --outdir=dist --minify && cp -r public/* dist/"
+    "build": "esbuild src/main.js --bundle --outfile=dist/main.js --minify && cp -r public/* dist/"
   },
   "keywords": [],
   "author": "",
